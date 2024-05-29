@@ -1,4 +1,4 @@
-from flask import request,Flask,jsonify
+from flask import Flask,request,jsonify
 from model import *
 
 
