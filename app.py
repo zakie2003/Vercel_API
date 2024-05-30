@@ -1,10 +1,10 @@
 from flask import Flask,request,jsonify
 from model import *
-
+from flask_cors import CORS
 
 app=Flask(__name__)
+CORS(app)
 @app.route("/",methods=('GET', 'POST'))
-
 def inp():   
     if request.method=="POST":
             req_json=request.json
@@ -15,10 +15,9 @@ def inp():
             aaa=MyModel()
             zzz=aaa.predict(inpf)
             response= jsonify({"prediction": zzz[0][0]})
-            response.headers.add('Access-Control-Allow-Origin', '*')
             return  response
+
     return jsonify({"prediction":0}) 
            
 
-if(__name__=="__main__"):
-    app.run(debug=True)   
+# app.run(host='0.0.0.0',debug=True)       
