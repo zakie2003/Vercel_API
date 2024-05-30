@@ -44,5 +44,6 @@ tzdata==2023.3
 urllib3==2.2.1
 Werkzeug==3.0.1
 wikipedia==1.4.0
+flask_cors==4.0.1
 gunicorn
 
