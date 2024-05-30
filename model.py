@@ -11,9 +11,9 @@ class MyModel:
     
     def __init__(self):
 
-        f1 = pd.read_csv("IPL_Ball_by_Ball_2008_2022.csv")
-        print()
-        f2 = pd.read_csv("IPL_Matches_Result_2008_2022.csv")
+        f1 = pd.read_csv("https://raw.githubusercontent.com/zakie2003/IPL_Poweplay/main/IPL_Ball_by_Ball_2008_2022.csv")
+
+        f2 = pd.read_csv("https://raw.githubusercontent.com/zakie2003/IPL_Poweplay/main/IPL_Matches_Result_2008_2022.csv")
         
         
         f1 = f1[f1["overs"]<6]
