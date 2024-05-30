@@ -14,8 +14,9 @@ def inp():
             print(inpf)
             aaa=MyModel()
             zzz=aaa.predict(inpf)
-            return jsonify({"prediction": zzz[0][0]})   
-
+            response= jsonify({"prediction": zzz[0][0]})
+            response.headers.add('Access-Control-Allow-Origin', '*')
+            return  response
     return jsonify({"prediction":0}) 
            
 
